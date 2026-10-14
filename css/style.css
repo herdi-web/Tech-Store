@@ -1,0 +1,447 @@
+:root {
+  --primary: #8e1ea2;
+  --bg: #fefaf3;
+  --font: #2a1a0e;
+  --success: #186049;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--font);
+  font-family: "Poppins", sans-serif;
+  height: 5000px;
+}
+
+/* navbar */
+
+.container-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  background-color: #ffff;
+}
+
+.container-navbar .brand {
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 0 4rem;
+}
+
+.container-navbar .brand a {
+  text-decoration: none;
+  color: var(--font);
+}
+
+.navbar-nav {
+  padding: 0 4rem;
+}
+
+.navbar-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  list-style-type: none;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.navbar-nav ul li a {
+  text-decoration: none;
+  color: var(--font);
+}
+
+.navbar-nav ul li a:hover {
+  color: var(--primary);
+}
+
+/* hero section */
+
+.container-hero {
+  display: flex;
+  margin-top: 5rem;
+  height: 50rem;
+}
+
+.container-hero .hero-content {
+  padding: 0 7rem;
+}
+
+.container-hero .hero-content h1 {
+  color: var(--primary);
+  font-size: 3.2rem;
+  font-weight: 600;
+  max-width: 50rem;
+}
+
+.container-hero .hero-content p {
+  font-size: 1.5rem;
+}
+
+.container-hero .hero-content button {
+  width: 11rem;
+  height: 4rem;
+  margin: 0.5rem 1rem;
+  background-color: var(--primary);
+  color: #ffff;
+  border-radius: 12px;
+  border: var(--primary);
+}
+
+.container-hero .hero-content button:hover {
+  background-color: var(--success);
+}
+
+.container-hero img {
+  position: relative;
+  right: 5rem;
+  margin-top: 5rem;
+  height: 25rem;
+  border-radius: 24px;
+}
+
+/* service section */
+
+.container-service {
+  margin-top: 7rem;
+  padding: 3rem;
+  display: flex;
+  gap: 2rem;
+  background-color: var(--primary);
+  height: 50rem;
+}
+
+.service-content h2,
+.products-content h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.service-content p,
+.products-content p {
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 0 10rem;
+}
+
+.servie-img {
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
+  height: 10rem;
+  margin-top: 10rem;
+}
+
+.servie-img img:hover {
+  background-color: rgba(254, 250, 243, 40%);
+  border-radius: 24px;
+}
+
+/* product section */
+
+.container-products {
+  margin-top: 5rem;
+  padding: 3rem;
+}
+
+.kategori-products {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.kategori-products button {
+  margin-top: 2rem;
+  width: 8rem;
+  height: 2.5rem;
+  background-color: var(--primary);
+  border: none;
+  color: #ffff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.kategori-products button:hover {
+  background-color: var(--success);
+}
+
+.products-lists {
+  margin: 2rem auto 0;
+  max-width: 70rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.products-lists img {
+  width: 100%;
+  max-width: 16rem;
+  height: 12rem;
+  object-fit: contain;
+  object-position: center;
+}
+
+.products-lists img:hover {
+  background-color: rgba(142, 30, 162, 40%);
+  border-radius: 24px;
+}
+
+/* media query */
+
+/* ---------- LAPTOP (<= 1199px) ---------- */
+@media (max-width: 1199px) {
+  .container-navbar .brand {
+    font-size: 2.2rem;
+    padding: 0 2rem;
+  }
+
+  .navbar-nav {
+    padding: 0 2rem;
+  }
+
+  .navbar-nav ul {
+    gap: 2.5rem;
+    font-size: 1.15rem;
+  }
+
+  .container-hero .hero-content {
+    padding: 0 3rem;
+  }
+
+  .container-hero .hero-content h1 {
+    font-size: 2.6rem;
+  }
+
+  .container-hero .hero-content p {
+    font-size: 1.25rem;
+  }
+
+  .container-hero img {
+    right: 2rem;
+    height: 22rem;
+  }
+
+  .container-service {
+    height: auto;
+    padding: 3rem 2rem;
+  }
+
+  .service-content p,
+  .products-content p {
+    padding: 0 4rem;
+  }
+
+  .service-content {
+    flex: 1;
+    min-width: 0; /* cegah konten melebihi lebar layar */
+  }
+
+  .servie-img {
+    flex-wrap: wrap;
+    gap: 2rem;
+    height: auto;
+    margin-top: 3rem;
+  }
+
+  .servie-img img {
+    height: 8rem;
+    max-width: 100%;
+  }
+
+  .products-lists {
+    max-width: 60rem;
+  }
+}
+
+/* ---------- TABLET (<= 768px) ---------- */
+@media (max-width: 768px) {
+  .container-navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .container-navbar .brand {
+    font-size: 2rem;
+    padding: 0;
+  }
+
+  .navbar-nav {
+    padding: 0;
+  }
+
+  .navbar-nav ul {
+    gap: 1.5rem;
+    margin: 0.5rem 0 0;
+    padding: 0;
+    font-size: 1.05rem;
+  }
+
+  /* hero: teks di atas, gambar di bawah, semuanya di tengah */
+  .container-hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .container-hero .hero-content {
+    padding: 0 2rem;
+  }
+
+  .container-hero .hero-content h1 {
+    font-size: 2.2rem;
+    max-width: 100%;
+  }
+
+  .container-hero img {
+    right: 0;
+    width: calc(100% - 4rem);
+    max-width: 36rem;
+    height: auto;
+    margin-top: 1.5rem;
+  }
+
+  .container-service {
+    margin-top: 4rem;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .service-content h2,
+  .products-content h2 {
+    font-size: 2rem;
+  }
+
+  .service-content p,
+  .products-content p {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+
+  .servie-img {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  .servie-img img {
+    height: 7rem;
+  }
+
+  .container-products {
+    margin-top: 4rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .kategori-products {
+    flex-wrap: wrap;
+  }
+
+  /* produk: 2 kolom */
+  .products-lists {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 40rem;
+    padding: 0;
+  }
+
+  .products-lists img {
+    height: 10rem;
+  }
+}
+
+/* ---------- MOBILE (<= 480px) ---------- */
+@media (max-width: 480px) {
+  body {
+    height: auto; /* hapus tinggi 3000px agar tidak ada ruang kosong */
+  }
+
+  .container-navbar .brand {
+    font-size: 1.7rem;
+  }
+
+  .navbar-nav ul {
+    gap: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .container-hero .hero-content {
+    padding: 0 1.25rem;
+  }
+
+  .container-hero .hero-content h1 {
+    font-size: 1.7rem;
+  }
+
+  .container-hero .hero-content p {
+    font-size: 1rem;
+  }
+
+  .container-hero .hero-content button {
+    width: 100%;
+    max-width: 14rem;
+    height: 3.2rem;
+    margin: 0.5rem 0;
+  }
+
+  .container-hero img {
+    width: calc(100% - 2.5rem);
+    border-radius: 16px;
+  }
+
+  .container-service {
+    padding: 2rem 1rem;
+  }
+
+  .service-content h2,
+  .products-content h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .service-content p,
+  .products-content p {
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  .servie-img {
+    gap: 1.25rem;
+  }
+
+  .servie-img img {
+    height: 5rem;
+  }
+
+  .container-products {
+    padding: 2rem 1rem;
+  }
+
+  .kategori-products {
+    gap: 0.5rem;
+  }
+
+  .kategori-products button {
+    width: auto;
+    padding: 0 0.9rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  /* produk: 2 kolom lebih rapat */
+  .products-lists {
+    gap: 1rem;
+  }
+
+  .products-lists img {
+    height: 7.5rem;
+  }
+}
