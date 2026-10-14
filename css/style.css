@@ -14,7 +14,6 @@ body {
   padding: 0;
   color: var(--font);
   font-family: "Poppins", sans-serif;
-  height: 5000px;
 }
 
 /* navbar */
@@ -117,14 +116,16 @@ body {
 }
 
 .service-content h2,
-.products-content h2 {
+.products-content h2,
+.contact-content h2 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2rem;
 }
 
 .service-content p,
-.products-content p {
+.products-content p,
+.contact-content p {
   text-align: center;
   font-size: 1.3rem;
   padding: 0 10rem;
@@ -193,6 +194,123 @@ body {
 .products-lists img:hover {
   background-color: rgba(142, 30, 162, 40%);
   border-radius: 24px;
+}
+
+/* contact section */
+.container-contact {
+  margin-top: 4rem;
+  background-color: var(--primary);
+  padding-top: 3rem;
+  height: 60rem;
+}
+
+.contact-info {
+  display: flex;
+}
+
+.contact-info .contact-form {
+  display: flex;
+  border-radius: 12px;
+  margin: 2rem 3rem;
+  padding: 2rem 3rem;
+  width: 60rem;
+  height: 35rem;
+  background-color: rgba(255, 255, 255, 80%);
+}
+
+.contact-info .contact-form form {
+  font-size: 1.5rem;
+}
+
+.contact-info .contact-form form input {
+  border-radius: 12px;
+  border: none;
+  height: 5rem;
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+  font-size: 1.2rem;
+  width: 55rem;
+}
+
+.contact-info .contact-form button {
+  justify-content: center;
+  margin-top: 2rem;
+  margin-left: 25rem;
+  width: 10rem;
+  height: 3rem;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.contact-info .contact-form button:hover {
+  background-color: var(--success);
+  color: #ffff;
+}
+
+.contact-info .address {
+  margin-top: 5rem;
+}
+
+.contact-info .address .socials {
+  margin-top: 10rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.contact-info .address .socials a {
+  margin: 0 2rem;
+  color: #ffff;
+}
+
+.contact-info .address .socials a:hover {
+  color: #97d7ff;
+}
+
+.contact-content {
+  padding: 0 2rem;
+}
+
+.contact-info {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  gap: 2rem;
+}
+
+.contact-info .contact-form {
+  box-sizing: border-box;
+  flex: 1 1 60%;
+  min-width: 0;
+  width: auto;
+  height: auto;
+  margin: 2rem 0;
+}
+
+.contact-info .contact-form form {
+  width: 100%;
+}
+
+.contact-info .contact-form form input {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.contact-info .contact-form button {
+  display: block;
+  margin: 2rem auto 0;
+}
+
+.contact-info .address {
+  flex: 1 1 40%;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.contact-info .address .socials .feather {
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 /* media query */
@@ -264,6 +382,29 @@ body {
   /* products section */
   .products-lists {
     max-width: 60rem;
+  }
+
+  /* contact section: dua kolom dengan lebar yang fleksibel */
+  .container-contact {
+    height: auto;
+    min-height: 0;
+    padding: 3rem 0;
+  }
+
+  .contact-content p {
+    padding: 0 4rem;
+  }
+
+  .contact-info .contact-form {
+    padding: 2rem;
+  }
+
+  .contact-info .contact-form form input {
+    height: 4rem;
+  }
+
+  .contact-info .address .socials {
+    margin-top: 4rem;
   }
 }
 
@@ -365,6 +506,61 @@ body {
   .products-lists img {
     height: 10rem;
   }
+
+  /* contact section: form dan alamat ditumpuk */
+  .container-contact {
+    padding: 2.5rem 0;
+  }
+
+  .contact-content h2 {
+    font-size: 2rem;
+  }
+
+  .contact-content p {
+    font-size: 1.1rem;
+    padding: 0 2rem;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 0;
+    padding: 0 1.5rem;
+  }
+
+  .contact-info .contact-form {
+    flex: auto;
+    width: 100%;
+    margin: 1.5rem 0;
+    padding: 1.75rem;
+  }
+
+  .contact-info .contact-form form {
+    font-size: 1.2rem;
+  }
+
+  .contact-info .contact-form form input {
+    height: 3.5rem;
+    margin-bottom: 1.25rem;
+    padding: 0 1rem;
+    font-size: 1rem;
+  }
+
+  .contact-info .contact-form button {
+    margin-top: 1rem;
+  }
+
+  .contact-info .address {
+    margin: 0 0 1rem;
+    font-size: 0.95rem;
+  }
+
+  .contact-info .address .socials {
+    margin-top: 2rem;
+  }
+
+  .contact-info .address .socials a {
+    margin: 0 1rem;
+  }
 }
 
 /* ---------- MOBILE (<= 480px) ---------- */
@@ -373,6 +569,7 @@ body {
     height: auto;
   }
 
+  /* navbar */
   .container-navbar .brand {
     font-size: 1.7rem;
   }
@@ -382,6 +579,7 @@ body {
     font-size: 0.95rem;
   }
 
+  /* hero section */
   .container-hero .hero-content {
     padding: 0 1.25rem;
   }
@@ -406,6 +604,7 @@ body {
     border-radius: 16px;
   }
 
+  /* service section */
   .container-service {
     padding: 2rem 1rem;
   }
@@ -430,6 +629,7 @@ body {
     height: 5rem;
   }
 
+  /* product section */
   .container-products {
     padding: 2rem 1rem;
   }
@@ -452,5 +652,63 @@ body {
 
   .products-lists img {
     height: 7.5rem;
+  }
+
+  /* contact section: tata letak satu kolom dan input penuh */
+  .container-contact {
+    padding: 2rem 0;
+  }
+
+  .contact-content {
+    padding: 0 1rem;
+  }
+
+  .contact-content h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-content p {
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  .contact-info {
+    padding: 0 1rem;
+  }
+
+  .contact-info .contact-form {
+    padding: 1.25rem;
+    border-radius: 10px;
+  }
+
+  .contact-info .contact-form form {
+    font-size: 1rem;
+  }
+
+  .contact-info .contact-form form input {
+    height: 3rem;
+    margin-bottom: 1rem;
+    padding: 0 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .contact-info .contact-form button {
+    width: 100%;
+    max-width: 10rem;
+    height: 2.75rem;
+    font-size: 1rem;
+  }
+
+  .contact-info .address {
+    font-size: 0.85rem;
+  }
+
+  .contact-info .address .socials {
+    font-size: 1.4rem;
+  }
+
+  .contact-info .address .socials a {
+    margin: 0 0.65rem;
   }
 }
