@@ -22,6 +22,9 @@
 
     <!-- my style -->
     <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- aos animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <!-- navbar start -->
@@ -37,12 +40,18 @@
           <li><a href="#contact">Kontak</a></li>
         </ul>
       </div>
+      <i data-feather="align-center" id="menu-ex"></i>
     </nav>
     <!-- navbar end -->
 
     <!-- hero section start -->
     <section class="container-hero" id="home-page">
-      <div class="hero-content">
+      <div
+        class="hero-content"
+        data-aos="fade-up"
+        duration="1000"
+        data-aos-delay="100"
+      >
         <h1>Berbagai Kelengkapan Komputer</h1>
         <p>
           Temukan laptop, monitor, keyboard, mouse, dan headphone pilihan untuk
@@ -51,25 +60,36 @@
         </p>
         <button>Detail Produk Kami</button>
       </div>
-      <img src="assets/img/hero.jpg" alt="hero image" />
+      <img
+        src="assets/img/hero.jpg"
+        alt="hero image"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+      />
     </section>
     <!-- hero section end -->
 
     <!-- service section start -->
     <section class="container-service" id="service">
       <div class="service-content">
-        <h2>Layanan Kami</h2>
-        <p>
+        <h2 data-aos="fade-up" duration="2000">Layanan Kami</h2>
+        <p data-aos="fade-up" duration="2000" data-aos-delay="200">
           Kami melayani penjualan perangkat komputer baru dengan harga bersaing.
           Setiap produk dicek lebih dulu sebelum dikirim, sehingga Anda menerima
           barang yang berfungsi dengan baik dan sesuai deskripsi.
         </p>
-        <p>
+        <p data-aos="fade-up" duration="2000" data-aos-delay="400">
           Tim kami juga siap membantu memilih perangkat sesuai kebutuhan dan
           anggaran Anda. Tersedia garansi resmi, layanan purna jual, dan
           pengiriman aman ke seluruh Indonesia.
         </p>
-        <div class="service-img">
+        <div
+          class="service-img"
+          data-aos="zoom-in-up"
+          duration="2000"
+          data-aos-delay="600"
+        >
           <img src="assets/img/keyboard3.png" alt="keyboard" />
           <img src="assets/img/monitor1.png" alt="monitor" />
           <img src="assets/img/mouse2.png" alt="mouse" />
@@ -82,8 +102,15 @@
     <!-- product section start -->
     <section class="container-products" id="product">
       <div class="products-content">
-        <h2>Produk Kami</h2>
-        <div class="kategori-products">
+        <h2 data-aos="fade-up" duration="3000" data-aos-delay="100">
+          Produk Kami
+        </h2>
+        <div
+          class="kategori-products"
+          data-aos="fade-up"
+          duration="3000"
+          data-aos-delay="300"
+        >
           <button class="active">Semua Produk</button>
           <button>Headphone</button>
           <button>Keyboard</button>
@@ -91,7 +118,12 @@
           <button>Monitor</button>
           <button>Mouse</button>
         </div>
-        <div class="products-lists">
+        <div
+          class="products-lists"
+          data-aos="fade-up"
+          duration="3000"
+          data-aos-delay="500"
+        >
           <img
             src="assets/img/headphone2.png"
             alt="head phone"
@@ -251,6 +283,12 @@
       </div>
     </footer>
     <!-- footer end -->
+
+    <!-- aos animation -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
     <!-- feather icon -->
     <script>

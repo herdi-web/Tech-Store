@@ -1,3 +1,15 @@
+// hamburger menu
+const menu = document.querySelector(".navbar-nav");
+const btnMenu = document.querySelector("#menu-ex");
+
+btnMenu.onclick = () => {
+  menu.classList.toggle("active");
+};
+
+window.onscroll = () => {
+  menu.classList.remove("active");
+};
+
 // for feat filter product
 const btnFilter = document.querySelectorAll(".kategori-products button");
 const products = document.querySelectorAll(".products-lists img");
